@@ -1,5 +1,5 @@
 # LogoLibrary
-Logo library is a simple library using Java - Springbootand for server and Javascript - React for client
+LogoLibrary is a simple library app using Java - Springboot for server and Javascript - React for client
 
 
 A work of ***Yusuf Ali Karaca***
