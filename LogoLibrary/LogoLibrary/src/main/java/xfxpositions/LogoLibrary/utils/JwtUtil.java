@@ -18,7 +18,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class JwtUtil {
 
-    private static final int validity = 5 * 60 * 1000;
+    private static final int validity = 5 * 60 * 1000 * 100;
     Key key = Keys.secretKeyFor(SignatureAlgorithm.HS256);
 
     public String generateToken(String username) {
