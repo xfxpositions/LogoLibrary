@@ -18,15 +18,14 @@ import org.springframework.stereotype.Service;
 @Service
 public class JwtUtil {
 
-    private static final int validity = 5 * 60 * 1000 * 100;
+    private static final int validity =3600000;
     Key key = Keys.secretKeyFor(SignatureAlgorithm.HS256);
 
     public String generateToken(String username) {
         return Jwts.builder()
                 .setSubject(username)
                 .setIssuer("admin")
-                .setIssuedAt(new Date(System.currentTimeMillis()))
-                .setExpiration(new Date(System.currentTimeMillis() + validity))
+                .setExpiration(new Date((new Date()).getTime() + validity))
                 .signWith(key)
                 .compact();
     }

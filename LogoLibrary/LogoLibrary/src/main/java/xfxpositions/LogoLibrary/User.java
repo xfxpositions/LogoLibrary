@@ -6,6 +6,7 @@ public class User {
 
 
     public User(String name, String password, int securityLevel, long id){
+
         this.name = name;
         this.password = password;
 
