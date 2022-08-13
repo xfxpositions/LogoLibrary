@@ -24,7 +24,6 @@ public class JwtUtil {
     public String generateToken(String username) {
         return Jwts.builder()
                 .setSubject(username)
-                .setIssuer("admin")
                 .setExpiration(new Date((new Date()).getTime() + validity))
                 .signWith(key)
                 .compact();

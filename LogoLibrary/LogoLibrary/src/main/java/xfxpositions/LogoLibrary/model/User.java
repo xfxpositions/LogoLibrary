@@ -1,5 +1,6 @@
 package xfxpositions.LogoLibrary.model;
 
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -11,10 +12,12 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 @Setter
 @ToString
 @EnableMongoRepositories(basePackages = "repo.packages")
-@Document(collection = "books")
-public class Book {
+@Document(collection = "users")
+public class User {
     @Id
     public String id;
-    public String bookName;
-    public String authorName;
+    public String name;
+    public String password;
+    public int securityLevel;
+
 }

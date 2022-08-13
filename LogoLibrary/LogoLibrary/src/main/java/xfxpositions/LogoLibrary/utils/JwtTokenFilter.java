@@ -37,7 +37,7 @@ public class JwtTokenFilter extends OncePerRequestFilter {
             try {
                 username = tokenManager.getUsernameToken(token);
             } catch (Exception e) {
-                System.out.println(e.getMessage());
+                System.out.println("JWT PARSING ERROR" + e.getMessage());
             }
         }
 
